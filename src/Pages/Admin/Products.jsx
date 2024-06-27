@@ -10,7 +10,7 @@ const Products = () => {
   //getall products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/get-product");
+      const { data } = await axios.get("https://ecommerce-website-backend-mwbn.vercel.app/api/v1/product/get-product");
       setProducts(data.products);
     } catch (error) {
       console.log(error);
@@ -34,7 +34,7 @@ const Products = () => {
             {products?.map((p) => (
               <Link
                 key={p._id}
-                to={`/dashboard/admin/product/${p.slug}`}
+                to={`https://ecommerce-website-backend-mwbn.vercel.app/dashboard/admin/product/${p.slug}`}
                 className="product-link"
               >
                 <div className="card m-2" style={{ width: "18rem" }}>

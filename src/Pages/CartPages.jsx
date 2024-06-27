@@ -63,7 +63,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("/api/v1/product/braintree/payment", {
+      const { data } = await axios.post("https://ecommerce-website-backend-mwbn.vercel.app/api/v1/product/braintree/payment", {
         nonce,
         cart,
       });

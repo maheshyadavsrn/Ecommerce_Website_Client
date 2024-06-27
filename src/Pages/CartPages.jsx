@@ -70,7 +70,7 @@ const CartPage = () => {
       setLoading(false);
       localStorage.removeItem("cart");
       setCart([]);
-      navigate("https://ecommerce-website-client.onrender.com");
+      navigate("/");
       toast.success("Payment Completed Successfully ");
     } catch (error) {
       console.log(error);
